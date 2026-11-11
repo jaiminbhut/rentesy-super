@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "rentesy-super",
+    "slug": "rentesy-super",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rentesy.superprototype"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.rentesy.superprototype"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to use the microphone so you can talk to Super.",
+          "speechRecognitionPermission": "Allow $(PRODUCT_NAME) to turn your voice into text for Super.",
+          "androidSpeechServicePackages": [
+            "com.google.android.googlequicksearchbox"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to attach photos of maintenance issues.",
+          "cameraPermission": false,
+          "microphonePermission": "Allow $(PRODUCT_NAME) to use the microphone so you can talk to Super."
+        }
+      ]
+    ],
+    "scheme": "rentesy-super",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
